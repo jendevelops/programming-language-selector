@@ -1,16 +1,4 @@
 $(document).ready(function() {
-  // function useCase(userUseCase) {
-  //   if (userUseCase === "mobile") {
-  //     return ["swift", "flutter", "kotlin"];
-  //   } else if (userUseCase === "web") {
-  //     return ["java", "python", "javascript"];
-  //   } else if (userUseCase === "data") {
-  //     return ["r", "python", "matlab"];
-  //   } else {
-  //     return "Error. You didn't make a valid choice.";
-  //   }
-  // }
-
   function userAnswers() {
     var q1_answer = $("input[name=q1]:checked").val();
     var q2_answer = $("input[name=q2]:checked").val();
