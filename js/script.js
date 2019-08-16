@@ -48,8 +48,9 @@ $(document).ready(function() {
     }
   }
   $(".quiz").click(function(event) {
-    $(".header").hide();
-    $("form").show();
+    $(".header").animate({height: "0"});
+    $(".header").children().not("h1").hide();
+    $("form").slideDown("slow");
 
 
   });
@@ -57,6 +58,7 @@ $(document).ready(function() {
     var sug = suggestion(userAnswers());
     $("#" + sug).show();
     $(".hidden").children().not("#" + sug).hide();
+
 
   });
 

@@ -6,7 +6,9 @@
   background-color: #83b582;
   color: #ffffc5;
 }
-
+.header p{
+  padding:0 10% 0;
+}
 form{
   display: none;
 }
