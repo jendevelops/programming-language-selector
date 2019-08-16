@@ -62,6 +62,8 @@ $(document).ready(function() {
 
   $("button").click(function(event) {
 
-    var tallyMatrix = useCase(userAnswers()[0]);
-  });
+    var sug = suggestion(userAnswers());
+    $("#"+sug).show();
+
+    });
 });
