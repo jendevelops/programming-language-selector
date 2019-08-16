@@ -1,29 +1,15 @@
 $(document).ready(function() {
-  function useCase(userUseCase) {
-    if (userUseCase === "mobile") {
-      return {
-        "swift": 0,
-        "flutter": 0,
-        "kotlin": 0
-      };
-    } else if (userUseCase === "web") {
-      return {
-        "java": 0,
-        "python": 0,
-        "javascript": 0
-      };
-    } else if (userUseCase === "data") {
-      return {
-        "python": 0,
-        "r": 0,
-        "matlab": 0
-      };
-    } else {
-      return "Error. You didn't make a valid choice.";
-    }
-
-
-  }
+  // function useCase(userUseCase) {
+  //   if (userUseCase === "mobile") {
+  //     return ["swift", "flutter", "kotlin"];
+  //   } else if (userUseCase === "web") {
+  //     return ["java", "python", "javascript"];
+  //   } else if (userUseCase === "data") {
+  //     return ["r", "python", "matlab"];
+  //   } else {
+  //     return "Error. You didn't make a valid choice.";
+  //   }
+  // }
 
   function userAnswers() {
     var q1_answer = $("input[name=q1]:checked").val();
@@ -35,9 +21,44 @@ $(document).ready(function() {
     return all_answers;
   }
 
-function tallyScore(scoreMatrix, userAnswerArray){
+  function suggestion(userAnswerArray) {
+    if (userAnswerArray[0] === "mobile") {
+      if (userAnswerArray[4] === "apple") {
+        return "swift";
+      } else if (userAnswerArray[4] === "android" && userAnswerArray[2] === "new") {
+        return "flutter";
+      } else if (userAnswerArray[4] === "android" && userAnswerArray[2] === "average" || userAnswerArray[2] === "old") {
+        return "kotlin";
+      } else {
+        return "Something went wrong here... #mobile";
+      }
 
-}
+    } else if (userAnswerArray[0] === "web") {
+      if (userAnswerArray[3] === "first") {
+        return "python";
+      } else if (userAnswerArray[3] === "second") {
+        return "java";
+      } else if (userAnswerArray[3] === "third") {
+        return "js";
+      } else {
+        return "Something went wrong here... #web";
+      }
+
+    } else if (userAnswerArray[0] === "data") {
+      if (userAnswerArray[1] === "standardized") {
+        return "python";
+      } else if (userAnswerArray[3] === "first" || "second") {
+        return "r";
+      } else if (userAnswerArray[3] === "third") {
+        return "matlab";
+      } else {
+        return "Something went wrong here... #data";
+      }
+
+    } else {
+      return "Error. You didn't make a valid choice. Please make sure you have checked all your answers.";
+    }
+  }
 
   $("button").click(function(event) {
 
