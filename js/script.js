@@ -47,12 +47,17 @@ $(document).ready(function() {
       return "Error. You didn't make a valid choice. Please make sure you have checked all your answers.";
     }
   }
+  $(".quiz").click(function(event) {
+    $(".header").hide();
+    $("form").show();
 
-  $("button").click(function(event) {
 
+  });
+  $(".submit").click(function(event) {
     var sug = suggestion(userAnswers());
-    $("#"+sug).show();
-    $(".hidden").children().not("#"+sug).hide();
+    $("#" + sug).show();
+    $(".hidden").children().not("#" + sug).hide();
 
-    });
+  });
+
 });
