@@ -64,6 +64,7 @@ $(document).ready(function() {
 
     var sug = suggestion(userAnswers());
     $("#"+sug).show();
+    $(".hidden").children().not("#"+sug).hide();
 
     });
 });
