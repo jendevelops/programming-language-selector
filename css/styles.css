@@ -13,9 +13,9 @@ form{
   display: none;
 }
 
-.hidden{
-  padding: 100px;
-}
+/* .hidden{
+  padding: 50px;
+} */
 
 #kotlin, #r, #java, #swift, #js, #matlab, #python, #flutter{
   display: none;

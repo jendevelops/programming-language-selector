@@ -48,7 +48,9 @@ $(document).ready(function() {
     }
   }
   $(".quiz").click(function(event) {
-    $(".header").animate({height: "0"});
+    $(".header").animate({
+      height: "0"
+    });
     $(".header").children().not("h1").hide();
     $("form").slideDown("slow");
 
@@ -56,8 +58,12 @@ $(document).ready(function() {
   });
   $(".submit").click(function(event) {
     var sug = suggestion(userAnswers());
-    $("#" + sug).show();
+    $("#" + sug).css("padding", "100px");
+    $("#" + sug).slideDown("slow");
     $(".hidden").children().not("#" + sug).hide();
+    $("html, body").animate({
+      scrollTop: $(document).height
+    }, "slow");
 
 
   });
