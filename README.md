@@ -27,7 +27,7 @@ Option 2: To view online, please visit the website at [https://jbatara.github.io
 
 ## Known Bugs
 
-* If viewing locally, Safari does not allow local html files to be viewed.
+* Choosing WebApp, Loose, New, Popular, and Android yields no result. Will release update to combat this.
 
 
 ## Support and contact details
