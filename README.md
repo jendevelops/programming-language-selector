@@ -27,7 +27,7 @@ Option 2: To view online, please visit the website at [https://jbatara.github.io
 
 ## Known Bugs
 
-* Choosing WebApp, Loose, New, Popular, and Android yields no result. Will release update to combat this.
+* All known bugs have been resolved.
 
 
 ## Support and contact details
