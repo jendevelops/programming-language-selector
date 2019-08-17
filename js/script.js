@@ -35,10 +35,10 @@ $(document).ready(function() {
     } else if (userAnswerArray[0] === "data") {
       if (userAnswerArray[1] === "order") {
         return "python";
-      } else if (userAnswerArray[3] === "first" || "second") {
-        return "r";
       } else if (userAnswerArray[3] === "third") {
         return "matlab";
+      } else if (userAnswerArray[3] === "first" || "second") {
+        return "r";
       } else {
         return "Something went wrong here... #data";
       }
@@ -58,6 +58,7 @@ $(document).ready(function() {
   });
   $(".submit").click(function(event) {
     var sug = suggestion(userAnswers());
+    console.log(userAnswers());
     console.log(sug);
     $("#" + sug).css("padding", "100px");
     $("#" + sug).slideDown("slow");
